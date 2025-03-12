@@ -1,0 +1,74 @@
+.layout {
+    display: flex;
+
+    .sidebar {
+        width: 72px;
+        height: 100vh;
+        background-color: #fff;
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .rightbar {
+        flex-grow: 1; // Takes up remaining width
+        display: flex;
+        flex-direction: column;
+        min-width: calc(100% - 72px);
+
+
+        .navbar {
+            height: 64px;
+            width: 100%;
+        }
+
+        .wraper {
+            flex-grow: 1; // Takes up remaining height below navbar
+            padding: 24px;
+            overflow: auto; // Enables internal scrolling
+            white-space: nowrap; // Prevents content wrapping
+        }
+    }
+}
+.cards {
+    .MuiPaper-root:last-child {  // Selects the last child Paper component
+        .MuiCardContent-root {
+            padding-bottom: 16px;
+        }
+    }
+}
+
+
+.card-sm {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+
+    .card-sm-block {
+        width: 30%;
+        border: 1px solid #e5e5e5;
+        padding: 5px 10px;
+        border-radius: 4px;
+
+        .text {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap:5px;
+            span {
+                height: 12px !important;
+                width: 12px !important;
+                border-radius: 100%;
+            }
+            svg:last-child {
+                margin-left: auto;
+                font-size: 24px;
+            }
+           
+        }
+
+        .sub-text {
+            font-size: 12px;
+            color: #A3A3A3;
+        }
+    }
+}
